@@ -1,8 +1,12 @@
 <div class="jumbotron center">
-     <h1>Welcome to my app!</h1>
+     
      <% if user_signed_in? %>
-          welcome welcom
+          
      <% else %>
+     <h1> 
+     	<p>welcome to iscoop. iscoop lets you share tech news with the tech city community. whether it is tech news you read online,on print or watched on tv, iscoop lets you summarise it and share with the community </p>
+     </h1>
+       
        <p>
          <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
          
