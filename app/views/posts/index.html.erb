@@ -1,29 +1,26 @@
-<h1>Listing posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Body</th>
-      <th>Source</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.body %></td>
-        <td><%= post.source %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div id="pins">
+  <% @posts.each do |post| %>
+    <div class="box">
+      <%= post.body %>
+      <%= post.source %>
+      <%= link_to 'Show', post_path(pin) %>
+        <%= link_to 'Edit', edit_post_path(pin) %>
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
 
 <br>
 
 <%= link_to 'New Post', new_post_path %>
+
+
+
+
+
+
+
+
+
+
