@@ -1,5 +1,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  
+  # needs to login before viewing any page except index and show
+  before_action :authenticate_user!, except: [:index, :show] 
+  
+  #only the right user can edit,update or delete a post
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   # GET /it shows all the posts
  
@@ -14,7 +20,7 @@ class PostsController < ApplicationController
 
   # GET /creates a new post
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   # GET /edits a post
@@ -24,7 +30,7 @@ class PostsController < ApplicationController
   # POST /this is what actually puts the new pin in a database
   
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
 
       if @post.save
         redirect_to @post, notice: 'Post was successfully created.' 
@@ -59,6 +65,18 @@ class PostsController < ApplicationController
     def set_post
       @post = Post.find(params[:id])
     end
+
+    def correct_user
+      @post = current_user.posts.find_by(id: params[:id])
+      redirect_to posts_path, notice: "no cant do" if @post.nil?
+    end
+
+
+
+
+
+
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params

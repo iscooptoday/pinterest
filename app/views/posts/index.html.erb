@@ -5,6 +5,7 @@
     <tr>
       <th>Summary</th>
       <th>Source</th>
+      <th>user email</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,14 +17,20 @@
       <tr>
         <td><%= post.summary %></td>
         <td><%= post.source %></td>
+        <td><%= post.user.email if post.user %></td>
         <td><%= link_to 'Show', post %></td>
+        <% if post.user == current_user %>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Post', new_post_path %>
+<% end %>
+
