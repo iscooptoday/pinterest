@@ -5,7 +5,7 @@
         <div class="panel-body">
        <p> source: <%= post.source %></p>
        <p> posted <%= time_ago_in_words(post.created_at) %> ago.</p>
-          by <%= post.user.email if post.user %>
+          by <%= post.user.name if post.user %>
       </div>
     </div>
   <% end %>
