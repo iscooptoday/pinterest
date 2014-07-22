@@ -7,10 +7,10 @@ class PostsController < ApplicationController
   #only the right user can edit,update or delete a post
   before_action :correct_user, only: [:edit, :update, :destroy]
 
-  # GET /it shows all the posts
+  # GET /it shows all the posts the .order"created at desc" shows in descending order
  
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
   end
 
   # GET /it shows the post selected

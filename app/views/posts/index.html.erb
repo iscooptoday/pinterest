@@ -3,12 +3,9 @@
     <div class="box panel panel-default">
         <%= post.summary %>
         <div class="panel-body">
-       <p> <%= post.source %></p>
-        <p><%= post.user.email if post.user %></p>
-        <% if post.user == current_user %>
-        <%= link_to 'Edit', edit_post_path(post) %>
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-       <% end %>
+       <p> source: <%= post.source %></p>
+       <p> posted <%= time_ago_in_words(post.created_at) %> ago.</p>
+          by <%= post.user.email if post.user %>
       </div>
     </div>
   <% end %>
