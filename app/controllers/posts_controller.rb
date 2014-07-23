@@ -13,20 +13,13 @@ class PostsController < ApplicationController
     @posts = Post.all.order("created_at DESC")
   end
 
-  # GET /it shows the post selected
   
-  def show
-  end
-
   # GET /creates a new post
   def new
     @post = current_user.posts.build
   end
 
-  # GET /edits a post
-  def edit
-  end
-
+  
   # POST /this is what actually puts the new pin in a database
   
   def create
