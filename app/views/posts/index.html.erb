@@ -3,6 +3,7 @@
     <div class="box panel panel-default">
         <%= post.summary %>
         <div class="panel-body">
+        <p><strong> title: <%= post.title %></strong></p>
        <p> source: <%= post.source %></p>
        <p> posted <%= time_ago_in_words(post.created_at) %> ago.</p>
        <p style="color:green"> by <%= post.user.name if post.user %></p>

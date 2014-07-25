@@ -34,6 +34,9 @@ class PostsController < ApplicationController
       end
   end
 
+def show
+end
+  
   # PATCH/PUT /updates a post
   
   def update
@@ -66,6 +69,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:summary, :source)
+      params.require(:post).permit(:summary, :title,:source)
     end
 end
