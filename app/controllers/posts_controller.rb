@@ -13,6 +13,9 @@ class PostsController < ApplicationController
     @posts = Post.all.order("created_at DESC")
   end
 
+  def show
+end
+
   
   # GET /creates a new post
   def new
@@ -34,8 +37,7 @@ class PostsController < ApplicationController
       end
   end
 
-def show
-end
+
   
   # PATCH/PUT /updates a post
   
@@ -69,6 +71,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:summary, :title,:source)
+      params.require(:post).permit(:summary,:title,:source)
     end
 end
