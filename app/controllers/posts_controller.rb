@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   
   # needs to login before viewing any page except index and show
-  before_action :authenticate_user!, except: [:index, :show] 
+  before_action :authenticate_user!, except: [:index] 
   
   #only the right user can edit,update or delete a post
   before_action :correct_user, only: [:edit, :update, :destroy]
@@ -29,7 +29,7 @@ end
     @post = current_user.posts.build(post_params)
 
       if @post.save
-        redirect_to @post, notice: 'Post was successfully created.' 
+        redirect_to root_path, notice: 'Post was successfully created.' 
         
       else
         render action: 'new' 
