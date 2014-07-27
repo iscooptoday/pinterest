@@ -2,7 +2,7 @@
     <% @posts.each do |post| %>
     <div class="box panel panel-default">
         <strong> title: <%= post.title %></strong>
-        <%= post.summary %>
+       <p><%= post.summary %></p>
         <div class="panel-body">
        <p> source: <%= post.source %></p>
        <p> posted <%= time_ago_in_words(post.created_at) %> ago.</p>
