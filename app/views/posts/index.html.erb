@@ -5,16 +5,15 @@
          <div class="container">   
            <div class="posts"
             <% @posts.each do |post| %>
-            
-            <strong><%= post.title %></strong>
+            <h2><%= post.title %></h2>
             <p><%= post.summary %></p>
             <p> source: <%= post.source %></p>
                <div class="post-meta">
                  posted <%= time_ago_in_words(post.created_at) %> ago.
                 <p style="color:green"> by <%= post.user.name if post.user %></p></div>
-      <% end %>
+      
     </div>
-  
+  <% end %>
        
 </div>  
 
