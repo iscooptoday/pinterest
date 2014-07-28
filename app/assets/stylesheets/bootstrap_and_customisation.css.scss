@@ -3,10 +3,12 @@
 $body-bg:                  #ecf0f1;
 $font-family-sans-serif:   'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:             45px;
-$navbar-default-bg:         white;
-$navbar-default-brand-color: #c0392b;
+$navbar-default-bg:         #3498db;
+$navbar-default-brand-color: white;
 $brand-primary:              #c0392b;
 $jumbotron-bg:               white;
+
+
 
 @import 'bootstrap';
 
@@ -16,4 +18,12 @@ $jumbotron-bg:               white;
 
 .navbar-brand {
      font-weight: bold;
+
+}
+
+.nav-links {
+     font-weight: bold;
+
+
+
 }
