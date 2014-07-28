@@ -7,9 +7,9 @@
             <% @posts.each do |post| %>
             <h2 style="font-family:Open Sans;color:#2980b9"><%= post.title %></h2>
            <p style="font-family:Open Sans;font-size:17px;"><%= post.summary %></p>
-            <p style="color:#95a5a6"> source: <%= post.source %></p>
+            <p style="color:#95a5a6">  <% post.source %></p>
                <div class="post-meta">
-                <p style="color:#95a5a6"> posted <%= time_ago_in_words(post.created_at) %> ago.</p>
+                <p style="color:#95a5a6"> <%= time_ago_in_words(post.created_at) %> ago.</p>
                <p style="color:#3498db"> by <%= post.user.name if post.user %></p></div>
       
     </div>
