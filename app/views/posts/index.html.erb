@@ -5,7 +5,7 @@
          <div class="container">   
            <div class="posts">
             <% @posts.each do |post| %>
-            <h2 style="font-family:Open Sans;color:#2980b9"><%= post.title %></h2>
+            <strong><h2 style="font-family:Open Sans;color:#2980b9"><%= post.title %></h2></strong>
            <p style="font-family:Open Sans;font-size:17px;"><%= post.summary %></p>
             <p style="color:#95a5a6">  <% post.source %></p>
                <div class="post-meta">
