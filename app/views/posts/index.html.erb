@@ -6,7 +6,7 @@
            <div class="posts">
             <% @posts.each do |post| %>
             <h2 style="color:blue"><%= post.title %></h2>
-           <strong> <p><%= post.summary %></p></strong>
+           <p style="font-family:Sanvito;font-size:20px;"><%= post.summary %></p>
             <p> source: <%= post.source %></p>
                <div class="post-meta">
                  posted <%= time_ago_in_words(post.created_at) %> ago.
