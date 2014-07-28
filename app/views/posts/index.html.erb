@@ -5,12 +5,12 @@
          <div class="container">   
            <div class="posts">
             <% @posts.each do |post| %>
-            <h2 style="font-family:Open Sans;"><%= post.title %></h2>
+            <h2 style="font-family:Open Sans;color:#2980b9"><%= post.title %></h2>
            <p style="font-family:Open Sans;font-size:17px;"><%= post.summary %></p>
-            <p> source: <%= post.source %></p>
+            <p style="color:#95a5a6"> source: <%= post.source %></p>
                <div class="post-meta">
-                 posted <%= time_ago_in_words(post.created_at) %> ago.
-               <strong><p style="color:green"> by <%= post.user.name if post.user %></p></strong></div>
+                <p style="color:#95a5a6"> posted <%= time_ago_in_words(post.created_at) %> ago.</p>
+               <p style="color:#3498db"> by <%= post.user.name if post.user %></p></div>
       
     </div>
   <% end %>
