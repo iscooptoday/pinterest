@@ -10,7 +10,7 @@
             <p> source: <%= post.source %></p>
                <div class="post-meta">
                  posted <%= time_ago_in_words(post.created_at) %> ago.
-                <p style="color:green"> by <%= post.user.name if post.user %></p></div>
+               <strong> <p style="color:green"> by <%= post.user.name if post.user %></p></strong></div>
       
     </div>
   <% end %>
