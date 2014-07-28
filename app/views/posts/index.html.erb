@@ -6,11 +6,11 @@
            <div class="posts">
             <% @posts.each do |post| %>
             <h2 style="color:blue"><%= post.title %></h2>
-            <p><%= post.summary %></p>
+           <strong> <p><%= post.summary %></p></strong>
             <p> source: <%= post.source %></p>
                <div class="post-meta">
                  posted <%= time_ago_in_words(post.created_at) %> ago.
-               <strong> <p style="color:green"> by <%= post.user.name if post.user %></p></strong></div>
+               <strong><p style="color:green"> by <%= post.user.name if post.user %></p></strong></div>
       
     </div>
   <% end %>
