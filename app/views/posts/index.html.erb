@@ -6,10 +6,10 @@
              <p style="font-family:Cottonwood;font-size:17px;"><%= post.summary %>
              </p>
              <strong><p style="font-family:tahoma;color:#bdc3c7"> <%= time_ago_in_words(post.created_at) %> ago.</p></strong>
-            <p style="color:#00008F">source:<%= post.source %></p>
+            <p style="color:green">source:<%= post.source %></p>
                <div class="post-meta">
                 
-               <p style="font-family:tahoma;color:#00008F;"> by <%= post.user.name if post.user %></p></div>
+               <p style="font-family:tahoma;color:green;"> by <%= post.user.name if post.user %></p></div>
      <hr> 
     </div>
   <% end %>
