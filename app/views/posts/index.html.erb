@@ -5,10 +5,11 @@
             <h2 style="font-family:Osaka Monospaced;color:#3333D6"><%= post.title %></h2>
              <p style="font-family:Cottonwood;font-size:17px;"><%= post.summary %>
              </p>
-            <p style="color:#bdc3c7">source:<%= post.source %></p>
+             <strong><p style="font-family:tahoma;color:#bdc3c7"> <%= time_ago_in_words(post.created_at) %> ago.</p></strong>
+            <p style="color:#00008F">source:<%= post.source %></p>
                <div class="post-meta">
-                <p style="font-family:tahoma;color:#bdc3c7"> <%= time_ago_in_words(post.created_at) %> ago.</p>
-               <p style="font-family:tahoma;color:#4D4DFF;"> by <%= post.user.name if post.user %></p></div>
+                
+               <p style="font-family:tahoma;color:#00008F;"> by <%= post.user.name if post.user %></p></div>
      <hr> 
     </div>
   <% end %>
