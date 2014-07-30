@@ -11,18 +11,18 @@
     </div>
   <% end %>
 
-<div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+<div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control", :autofocus => true%>
   </div>
-  <div class="field">
-    <%= f.label :summary %><br>
-    <%= f.text_area :summary %>
+  <div class="form-group">
+    <%= f.label :summary %>
+    <%= f.text_area :summary,class: "form-control", :autofocus => true %>
   </div>
 
-  <div class="field">
-    <%= f.label :source %><br>
-    <%= f.text_field :source %>
+  <div class="form-group">
+    <%= f.label :source %>
+    <%= f.text_field :source,class: "form-control", :autofocus => true %>
   </div>
   
   
