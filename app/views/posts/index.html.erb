@@ -6,17 +6,20 @@
              
              <ul style="list-style-type:square">
              
-             <li><p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary %>
-             </p></li>
-             <li><p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary2 %>
-             </p></li>
-             <li><p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary3 %>
-             </p></li>
+             <li class="bullet1"> <span> <p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary %>
+             </p> </span></li>
+             
+             <li class="bullet2"> <span> <p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary2 %>
+             </p> </span> </li>
+             
+             <li class="bullet3"> <span> <p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary3 %>
+             </p> </span> </li>
              
              </ul>
              
-             <strong><p style="font-family:tahoma;color:#bdc3c7;margin-left:28px"> <%= time_ago_in_words(post.created_at) %> ago.</p></strong>
-              <p style="color:green;margin-left:28px">source:<%= post.source %></p>
+             <p style="font-family:tahoma;color:#7f8c8d;margin-left:28px"> <%= time_ago_in_words(post.created_at) %> ago.</p>
+              
+              <p style="font-family:tahoma;color:red;margin-left:28px">source:<%= post.source %></p>
                
                <div class="post-meta">
                  <p style="font-family:tahoma;color:green;margin-left:28px"> by <%= post.user.name if post.user %></p></div>
