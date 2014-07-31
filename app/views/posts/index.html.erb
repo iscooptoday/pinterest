@@ -2,19 +2,24 @@
       <div class="container">   
         <div class="posts">
           <% @posts.each do |post| %>
-            <h2 style="font-family:Osaka Monospaced;color:#3333D6"><%= post.title %></h2>
-             <p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary %>
-             </p>
-             <p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary2 %>
-             </p>
-             <p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary3 %>
-             </p>
+            <h2 style="font-family:Osaka Monospaced;color:#3333D6;margin-bottom:25px;margin-left:25px"><%= post.title %></h2>
              
-             <strong><p style="font-family:tahoma;color:#bdc3c7"> <%= time_ago_in_words(post.created_at) %> ago.</p></strong>
-            <p style="color:green">source:<%= post.source %></p>
+             <ul style="list-style-type:square">
+             
+             <li><p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary %>
+             </p></li>
+             <li><p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary2 %>
+             </p></li>
+             <li><p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary3 %>
+             </p></li>
+             
+             </ul>
+             
+             <strong><p style="font-family:tahoma;color:#bdc3c7;margin-left:28px"> <%= time_ago_in_words(post.created_at) %> ago.</p></strong>
+              <p style="color:green;margin-left:28px">source:<%= post.source %></p>
+               
                <div class="post-meta">
-                
-               <p style="font-family:tahoma;color:green;"> by <%= post.user.name if post.user %></p></div>
+                 <p style="font-family:tahoma;color:green;margin-left:28px"> by <%= post.user.name if post.user %></p></div>
      <hr> 
     </div>
   <% end %>
