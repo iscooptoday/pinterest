@@ -3,8 +3,13 @@
         <div class="posts">
           <% @posts.each do |post| %>
             <h2 style="font-family:Osaka Monospaced;color:#3333D6"><%= post.title %></h2>
-             <p style="font-family:Cottonwood;font-size:17px;"><%= post.summary %>
+             <p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary %>
              </p>
+             <p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary2 %>
+             </p>
+             <p style="font-family:Cottonwood;font-size:17px;margin-bottom:25px"><%= post.summary3 %>
+             </p>
+             
              <strong><p style="font-family:tahoma;color:#bdc3c7"> <%= time_ago_in_words(post.created_at) %> ago.</p></strong>
             <p style="color:green">source:<%= post.source %></p>
                <div class="post-meta">
