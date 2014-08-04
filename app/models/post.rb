@@ -5,8 +5,8 @@ class Post < ActiveRecord::Base
 	validates :summary, presence: true
 	validates :summary2, presence: true
 	validates :summary3, presence: true
-	validates :summary, length: {maximum: 110}
-	validates :summary2, length: {maximum: 110}
-	validates :summary3, length: {maximum: 110}
+	validates :summary, length: {maximum: 140}
+	validates :summary2, length: {maximum: 140}
+	validates :summary3, length: {maximum: 140}
 	validates :source, presence: true
 end
