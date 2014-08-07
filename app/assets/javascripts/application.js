@@ -17,7 +17,6 @@
 //= require turbolinks
 //= require masonry/jquery.masonry
 //= require_tree .
-//= require google_analytics.js.coffee
 
 
 
