@@ -17,10 +17,10 @@
              
              </ul>
              
+             <p ><%= link_to "go to article", post.source,{:style=>'color:#3333D6;',:class => "css_class"} %></p>
+
              <p style="font-family:tahoma;color:#7f8c8d;margin-left:0px"> <%= time_ago_in_words(post.created_at) %> ago.</p>
               
-              <p style="font-family:tahoma;color:red;margin-left:0px">source:<%= post.source %></p>
-               
                <div class="post-meta">
                  <p style="font-family:tahoma;color:green;margin-left:0px"> by <%= post.user.name if post.user %></p></div>
      <hr> 
