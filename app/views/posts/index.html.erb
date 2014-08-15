@@ -2,6 +2,9 @@
       <div class="container">   
           <% @posts.each do |post| %>
           <div class="posts">
+             <div class="post-meta">
+                 <p style="font-family:tahoma;color:green;margin-left:0px;font-size:17px">  <%= post.user.name if post.user %></p></div>
+
             <h3 style="font-family:Osaka Monospaced;color:#3333D6;margin-bottom:25px;"><%= post.title %></h3>
              
              <ul style="list-style-type:none;padding: 0px; margin: 0px">
@@ -21,8 +24,7 @@
 
              <p style="font-family:tahoma;color:#7f8c8d;margin-left:0px"> <%= time_ago_in_words(post.created_at) %> ago.</p>
               
-               <div class="post-meta">
-                 <p style="font-family:tahoma;color:green;margin-left:0px"> by <%= post.user.name if post.user %></p></div>
+               
      <hr> 
     </div>
   <% end %>
