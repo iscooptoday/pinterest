@@ -18,6 +18,7 @@
              <li style="background-image:url(blueline.gif);background-repeat: no-repeat;background-position: 0px 0px;padding-left: 14px;"> <span> <p style="font-family:Open Sans;font-size:17px;margin-bottom:25px;font-weight:light"><%= post.summary3 %>
              </p> </span> </li>
              
+             <%= link_to 'Edit', edit_post_path(@post) %> 
              </ul>
              
              <p style="font-family:tahoma;color:#7f8c8d;margin-left:0px"> <%= time_ago_in_words(post.created_at) %> ago</p>
