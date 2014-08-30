@@ -3,8 +3,9 @@ Pinterest::Application.routes.draw do
   resources :posts
 
   devise_for :users
-  root "posts#index"
+  root "pages#landing"
   get "about" => "pages#about"
+  get "home" => "posts#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
