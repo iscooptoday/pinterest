@@ -29,7 +29,7 @@ end
     @post = current_user.posts.build(post_params)
 
       if @post.save
-        redirect_to root_path, notice: 'Post was successfully created.' 
+        redirect_to home_path, notice: 'Post was successfully created.' 
         
       else
         render action: 'new', notice: 'sorry can you do it again'
