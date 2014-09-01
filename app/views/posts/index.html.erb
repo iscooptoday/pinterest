@@ -3,7 +3,10 @@
           <% @posts.each do |post| %>
           <div class="posts">
              <div class="post-meta">
-                 <p style="font-family:tahoma;margin-left:0px;font-size:17px; color:#3333D6"><%= post.user.name if post.user %></p></div>
+                 <p style="font-family:tahoma;margin-left:0px;font-size:17px; color:#3333D6"><%= post.user.name if post.user %></p> 
+                      <p style="font-family:tahoma;color:#7f8c8d;margin-left:0px"> <%= time_ago_in_words(post.created_at) %> ago</p>
+
+               </div>
 
             <h3 style="font-family:Alright Sans;margin-bottom:25px;"><%= post.title %></h3>
              
@@ -20,8 +23,6 @@
              
              
              </ul>
-             
-             <p style="font-family:tahoma;color:#7f8c8d;margin-left:0px"> <%= time_ago_in_words(post.created_at) %> ago</p>
              
              <p style=font-size:15px ><%= link_to "Read more", post.source,{:style=>'color:#3333D6;',:class => "css_class"} %></p>
 
