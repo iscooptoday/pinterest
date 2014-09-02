@@ -8,23 +8,23 @@
 
                </div>
 
-            <h3 style="font-family:Alright Sans;margin-bottom:25px;"><%= post.title %></h3>
+            <h3 style="font-family:Alright Sans;margin-bottom:25px;"><%= post.title %>. <%= post.summary if post.summary %>. <%= post.summary2 if post.summary2 %> </h3>
              
              <ul style="list-style-type:none;padding: 0px; margin: 0px">
              
-             <li style="background-image:url(blueline.gif);background-repeat: no-repeat;background-position: 0px 0px;padding-left: 14px;" > <span> <p style="font-family:Open Sans;font-size:17px;margin-bottom:25px;font-weight:light"><%= post.summary %>
+             <li style="background-image:url(blueline.gif);background-repeat: no-repeat;background-position: 0px 0px;padding-left: 14px;" > <span> <p style="font-family:Open Sans;font-size:17px;margin-bottom:25px;font-weight:light"><% post.summary %>
              </p> </span></li>
              
-             <li style="background-image:url(blueline.gif);background-repeat: no-repeat;background-position: 0px 0px;padding-left: 14px;"> <span> <p style="font-family:Open Sans;font-size:17px;margin-bottom:25px;font-weight:light"><%= post.summary2 %>
+             <li style="background-image:url(blueline.gif);background-repeat: no-repeat;background-position: 0px 0px;padding-left: 14px;"> <span> <p style="font-family:Open Sans;font-size:17px;margin-bottom:25px;font-weight:light"><% post.summary2 %>
              </p> </span> </li>
              
-             <li style="background-image:url(blueline.gif);background-repeat: no-repeat;background-position: 0px 0px;padding-left: 14px;"> <span> <p style="font-family:Open Sans;font-size:17px;margin-bottom:25px;font-weight:light"><%= post.summary3 %>
+             <li style="background-image:url(blueline.gif);background-repeat: no-repeat;background-position: 0px 0px;padding-left: 14px;"> <span> <p style="font-family:Open Sans;font-size:17px;margin-bottom:25px;font-weight:light"><% post.summary3 %>
              </p> </span> </li>
              
              
              </ul>
              
-             <p style=font-size:15px ><%= link_to "Read Article", post.source,{:style=>'color:#3333D6;',:class => "css_class"} %></p>
+             <p style=font-size:15px ><% link_to "Read Article", post.source,{:style=>'color:#3333D6;',:class => "css_class"} %></p>
 
              
               
