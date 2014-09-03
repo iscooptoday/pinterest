@@ -12,9 +12,11 @@
   <% end %>
 
 
+
+
  <div class="form-group">
     <%= f.label :what_happened %>
-    <%= f.text_area :summary,class: "form-control", maxlength: "300",:autofocus => true %>
+    <%= f.text_area :summary,class: "form-control", maxlength: "300", :rows => "10",:autofocus => true %>
   </div>
 
 
@@ -51,8 +53,8 @@
     <% f.text_field :source,class: "form-control", :autofocus => true %>
   </div>
   
-  
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
+
+ <% end %>
