@@ -13,11 +13,29 @@
 
 
 
+<h3>what happened</h3>
+ 
+<form>
+<input readonly type="text" name="countDisplay" size="3" maxlength="3" value="300" style="border: none"> 
 
- <div class="form-group">
-    <%= f.label :what_happened %>
-    <%= f.text_area :summary,class: "form-control", maxlength: "300", :rows => "10",:autofocus => true %>
-  </div>
+<br>
+
+<textarea name="ta" rows="10"  style="width:300px;" onKeyDown="textCounter(this.form.ta,this.form.countDisplay);" onKeyUp="textCounter(this.form.ta,this.form.countDisplay);"></textarea>
+
+</form>
+
+
+
+<script language="javascript" type="text/javascript"> 
+var maxAmount = 300;
+function textCounter(charcount, showCountField) {
+    if (charcount.value.length > maxAmount) {
+        charcount.value = charcount.value.substring(0, maxAmount);
+  } else { 
+        showCountField.value = maxAmount - charcount.value.length;
+  }
+}
+</script>
 
 
 
