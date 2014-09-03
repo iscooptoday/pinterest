@@ -1,4 +1,4 @@
-      <%= render 'layouts/header' %>
+     
       
       <div class="container">   
           <% @posts.each do |post| %>
@@ -8,6 +8,7 @@
                       <p style="font-family:tahoma;color:#7f8c8d;margin-left:0px"> <%= time_ago_in_words(post.created_at) %> ago</p>
 
                </div>
+                
 
               <p style="font-family:Gotham;font-size:17px;font-weight:light;margin-bottom:25px"><%= post.title if post.title %> <%=post.summary %> <%= post.summary2 if post.summary2 %>
              </p> 
