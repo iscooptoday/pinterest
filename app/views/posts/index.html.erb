@@ -1,9 +1,9 @@
      
       
          <div class="container">
+          <% @posts.each do |post| %>
           <div class="posts">
             <div class="post-meta">
-          <% @posts.each do |post| %>
 
         
                 <p style="font-family:tahoma;margin-left:0px;margin-bottom:2px;font-size:17px; color:#3333D6"><%= post.user.name if post.user %></p> 
