@@ -23,7 +23,7 @@ end
   end
 
   
-  # POST /this is what actually puts the new pin in a database
+  # POST /this is what actually puts the new post in a database
   
   def create
     @post = current_user.posts.build(post_params)
