@@ -9,7 +9,7 @@
 
                </div>
                 
-
+               <%# basically the e only fiels that gets displayed on the index page is the summary field. i added title and summary 2 here just so the code dosent break because initially it was four fields before the pivot  %>
               <p style="font-family:Open Sans;font-size:large;line-height:1.4;margin-bottom:25px"><%= post.title if post.title %> <%=post.summary %> <%= post.summary2 if post.summary2 %>
              </p> 
 
@@ -30,7 +30,7 @@
 
 
 
-
+             <%# dont need all these fields anymore thats why i rmoved the equal sign in the ruby code. I didnt delete it because i might pivot again %>
 
              <ul style="list-style-type:none;padding: 0px; margin: 0px">
 
