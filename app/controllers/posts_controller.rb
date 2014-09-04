@@ -71,6 +71,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:summary,:summary2,:summary3,:title,:source)
+        params.require(:post).permit(:summary,)
     end
 end
