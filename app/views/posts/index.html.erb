@@ -1,9 +1,10 @@
      
       
          <div class="container">
-          <% @posts.each do |post| %>
-          
           <div class="posts">
+          <% @posts.each do |post| %>
+
+        
              <div class="post-meta">
                  <p style="font-family:tahoma;margin-left:0px;margin-bottom:2px;font-size:17px; color:#3333D6"><%= post.user.name if post.user %></p> 
                       <p style="font-family:tahoma;color:#7f8c8d;margin-left:0px"> <%= time_ago_in_words(post.created_at) %> ago</p>
