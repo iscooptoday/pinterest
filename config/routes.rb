@@ -1,5 +1,7 @@
 Pinterest::Application.routes.draw do
   
+  resources :interests
+
   resources :posts
 
   devise_for :users

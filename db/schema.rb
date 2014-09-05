@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731164524) do
+ActiveRecord::Schema.define(version: 20140904223553) do
+
+  create_table "interests", force: true do |t|
+    t.string   "description"
+    t.string   "frequency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 # Could not dump table "posts" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
