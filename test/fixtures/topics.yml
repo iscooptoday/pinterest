@@ -2,8 +2,8 @@
 
 one:
   description: MyString
-  frequency: MyString
+  url: MyString
 
 two:
   description: MyString
-  frequency: MyString
+  url: MyString

@@ -4,19 +4,15 @@
           <% @posts.each do |post| %>
           <div class="posts">
             <div class="post-meta">
-
-        
                 <p style="font-family:tahoma;margin-left:0px;margin-bottom:2px;font-size:17px; color:#3333D6"><%= post.user.name if post.user %></p> 
                       <p style="font-family:tahoma;color:#7f8c8d;margin-left:0px"> <%= time_ago_in_words(post.created_at) %> ago</p>
-
-               </div>
+                 </div>
                 
                <%# basically the e only fiels that gets displayed on the index page is the summary field. i added title and summary 2 here just so the code dosent break because initially it was four fields before the pivot  %>
               <p style="font-family:Open Sans;font-size:large;line-height:1.4;margin-bottom:25px;"> <%= post.title if post.title %> <%=post.summary %> <%= post.summary2 if post.summary2 %>
              </p> 
 
-         
-             
+              
              
 
 
