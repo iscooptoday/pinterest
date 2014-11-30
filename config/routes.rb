@@ -7,7 +7,7 @@ Pinterest::Application.routes.draw do
  resources :posts
 
   devise_for :users
-  root "pages#landing"
+  root "posts#index"
   get "about" => "pages#about"
   get "home" => "posts#index"
   get "create" => "pages#create"
