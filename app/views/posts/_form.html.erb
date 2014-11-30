@@ -4,14 +4,11 @@
 <%= form_for Post.new do |f| %>
   
 
-
-
-
 <%# Basically this is the only thing on this page. It is a text field using bootstrap form group.  %>
  
  <div class="form-group">
     
-    <%= f.text_area :summary, class: "form-control", maxlength: "140",rows:"2",placeholder:"who are you and what are you looking for", style:"width:80%;border: none;padding-left:0cm",:autofocus => true %><br> <div class="actions">
+    <%= f.text_area :summary, class: "form-control", maxlength: "140",rows:"4",placeholder:"who are you and what are you looking for", style:"width:80%;border: none;padding-left:0cm",:autofocus => true %><br> <div class="actions">
     <%= f.submit "post", class: "btn btn-primary" %>
   </div>
 
